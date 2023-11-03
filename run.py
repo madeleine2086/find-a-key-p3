@@ -20,12 +20,20 @@ while not key_is_found:
 
     if player_move == "a":
         player_position_x -= 1
+        if player_position_x < 0:
+            print("You hit the wall!!")
     elif player_move == "d":
         player_position_x += 1
+        if player_position_x > ROOM_WIDTH:
+            print("You hit the wall!!")
     elif player_move == "w":
         player_position_y += 1
+        if player_position_y > ROOM_HEIGHT:
+            print("You hit the wall!!")
     elif player_move == "s":
         player_position_y -= 1
+        if player_position_y < 0:
+            print("You hit the wall!!")
     else:
         print("Incorrect move, try again!")
 
