@@ -12,8 +12,12 @@ key_position_y = randint(0, ROOM_HEIGHT)
 player_position_x = 0
 player_position_y = 0
 key_is_found = False
+steps = 0
+
+print(key_position_x, key_position_y)
 
 while not key_is_found:
+    steps += 1
     print("You can choose to go left [A], right [D], up [W] or down [S]: ")
 
     player_move = input("What's your move? ")
@@ -36,5 +40,9 @@ while not key_is_found:
             print("You hit the wall!!")
     else:
         print("Incorrect move, try again!")
+
+    if player_position_x == key_position_x and player_position_y == key_position_y:
+        print("Congratulations! You found the key!")
+        print(f"You needed {steps} moves to find it")
 
     print(player_position_x, player_position_y)
