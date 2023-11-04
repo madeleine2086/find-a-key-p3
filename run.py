@@ -13,14 +13,17 @@ player_position_x = 0
 player_position_y = 0
 key_is_found = False
 steps = 0
+player_name = input("What's your name? ")
+print(f"Hello {player_name}! Your task is to find the key in a dark square room.\nYou start in the bottom left corner.")
 
 print(key_position_x, key_position_y)
 
 while not key_is_found:
     steps += 1
+    print("")
     print("You can choose to go left [A], right [D], up [W] or down [S]: ")
 
-    player_move = input("What's your move? ")
+    player_move = input(f"What's your move? ")
 
     if player_move == "a":
         player_position_x -= 1
@@ -42,7 +45,8 @@ while not key_is_found:
         print("Incorrect move, try again!")
 
     if player_position_x == key_position_x and player_position_y == key_position_y:
-        print("Congratulations! You found the key!")
-        print(f"You needed {steps} moves to find it")
+        print(f"Congratulations {player_name}! You found the key!")
+        print(f"You needed {steps} moves to find it.")
+        play_again = input("Do you want to play again?\nType [yes] or [no] ")
 
     print(player_position_x, player_position_y)
