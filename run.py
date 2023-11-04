@@ -1,6 +1,7 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
+from math import sqrt
 from random import randint
 
 ROOM_WIDTH = 10
@@ -19,7 +20,7 @@ def play_game():
     steps = 0
     
     print("Your task is to find the key in a dark square room.\nYou start in the bottom left corner.")
-
+    distance_before_steps = sqrt((key_position_x - player_position_x) ** 2 + (key_position_y - player_position_y) ** 2)
     print(key_position_x, key_position_y)
 
     while not key_is_found:
@@ -56,7 +57,16 @@ def play_game():
                 play_game()
             else:
                 quit()    
-                
-        print(player_position_x, player_position_y)
+
+        distance_after_steps = sqrt((key_position_x - player_position_x) ** 2 + (key_position_y - player_position_y) ** 2)
+
+        if distance_before_steps > distance_after_steps:
+            print("Warmer!")
+            print(player_position_x, player_position_y)
+        else:
+            print("Cold!")
+            print(player_position_x, player_position_y)
+
+        distance_before_steps = distance_after_steps
 
 play_game()
