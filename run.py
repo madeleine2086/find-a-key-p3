@@ -75,7 +75,7 @@ def play_game():
             print(f"Congratulations {player_name}! You found the key!")
             print(f"You needed {steps} steps to find it.")
             print("Do you want to play again?")
-            play_again = input.lower("Type [yes] or [no] ")
+            play_again = input("Type [yes] or [no] ")
             if play_again == "yes":
                 play_game()
             else:

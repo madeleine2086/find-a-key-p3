@@ -1,11 +1,14 @@
 
 ## Find The Key - Game Description
 
+![mockpic](https://github.com/madeleine2086/find-a-key-p3/assets/136820651/5f5857f5-361c-4435-b92b-1aa7ca334495)
+
 - Find The Key is simple but enjoyable, command line game.
 - The player's goal is to find the key that's hidden in a dark, square room. The key can be anywhere and its position is randomly set before the player starts.
 - The player is guided by messages describing player's distance from the key. If the distance is deacreasing, a 'Warmer!' message is printed to the terminal. If the distance is increasing, a 'Cold!' message is printed instead.
 - The player's goal is to find the key by navigating themselves with the help of messages printed while taking steps.
 - The game is written in Python and can be accessed in a mock terminal.
+- link to the game : https://find-the-key-1dc1585416fd.herokuapp.com/
 
 
 ## How To Play
@@ -32,6 +35,13 @@
 
 - Allow players to select the room size.
 - Allow players to start from different corners of the room.
+
+## Data model
+
+- I decided to use a function as my model. 
+- The game is wrapped in one function called 'play_game'.
+- The function displays instructions to the player, calculates distance between the player and the key, and gives clues.
+- When player finds the key the function asks if it should run again or end the game.
 
 ## Testing
 
