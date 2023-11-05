@@ -32,7 +32,6 @@
 
 - Allow players to select the room size.
 - Allow players to start from different corners of the room.
--
 
 ## Testing
 
@@ -40,10 +39,25 @@
     - Testing in my local terminal and Code Institute Heroku terminal.
     - Giving invalid inputs by typing values other than control keys; trying to go outside of the grid size.
 
+## Testing
+
+- PEP8 - no errors returned.
+
 ## Deployment
 
-- This project was deployed using Code Institute's mock terminal for Heroku
+- This project was deployed using Code Institute's mock terminal for Heroku:
+    - Steps for deployment:
+        - Fork or clone this repository
+        - Create a new Heroku app
+        - Set the buildbacks to Python and NodeJS in that order
+        - Link the Heroku app to the repository
+        - Click on Deploy
 
 ## Credits
 
 - Code Institute for the deployment terminal.
+- This project is inspired by work of developers sharing their knowledge onlie:
+    - https://www.youtube.com/@KacperSieradzinski
+    - https://www.youtube.com/@AniaKubow
+    - https://www.youtube.com/@programmingwithmosh
+    - https://www.youtube.com/@TechWithTim
