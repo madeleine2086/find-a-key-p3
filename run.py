@@ -80,6 +80,7 @@ def play_game():
                 play_game()
             else:
                 quit()
+
         # Second variable needed to display 'Cold' or 'Warmer' message
         after_step = sqrt((key_x - player_x) ** 2 + (key_y - player_y) ** 2)
 
